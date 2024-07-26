@@ -270,12 +270,12 @@ function App() {
         <>
             <Navbar />
             <SliderUpperSection />
-            {hotel ? <Slider hotel={hotel} /> : <p>No hotel data available</p>}
+            {hotel ? <Slider hotel={hotel} /> :  <div><ShimmerLoader /></div>}
             <div style={{ display: 'flex', margin: '0 auto', padding: '20px' }}>
                 <div style={{ flex: '2', marginRight: '40px' }}>
                     <HostInfoSection />
-                    {room ? <SleepSection room={room} /> : <p>No data available</p>}
-                    {hotel ? <AmenitiesSection hotel={hotel} /> : <p>No Amenities data available</p>}
+                    {room ? <SleepSection room={room} /> : <ShimmerLoader />}
+                    {hotel ? <AmenitiesSection hotel={hotel} /> : <ShimmerLoader />}
                     <DatePickerStatic />
                 </div>
                 <div style={{ flex: '1' }}>
@@ -283,7 +283,7 @@ function App() {
                 </div>
             </div>
             <ReviewSection />
-            {hotel ? <HostSection hotel={hotel} /> : <p>No Amenities data available</p>}
+            {hotel ? <HostSection hotel={hotel} /> : <ShimmerLoader />}
             <ThingsToKnowSection />
             <ExploreOptions />
         </>
