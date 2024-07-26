@@ -9,13 +9,13 @@ function HostInfoSection() {
                 </p>
                 <p>2 guests · 1 bedroom · 1 bed · 1 bath</p>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <img src="./images/star.jpg" alt="" width="20" height="20" />
+                    <img src="../../images/star.jpg" alt="" width="20" height="20" />
                     <p>New</p>
                 </div>
 
                 <hr />
                 <div className="host-profile" style={{ display: 'flex', alignItems: 'center' }}>
-                    <img src="./images/profile.png" alt="Host picture" />
+                    <img src="../../images/profile.png" alt="Host picture" />
                     <div>
                         <h2>Hosted by Fernanda</h2>
                         <p className="blur">Superhost . 7 years hosting</p>
@@ -23,14 +23,14 @@ function HostInfoSection() {
                 </div>
                 <hr />
                 <div className="host-profile" style={{ display: 'flex', alignItems: 'center' }}>
-                    <img src="./images/door.jpg" alt="Host picture" />
+                    <img src="../../images/door.jpg" alt="Host picture" />
                     <div>
                         <h2>Self Check-in</h2>
                         <p className="blur">Check yourself in with the smartlock</p>
                     </div>
                 </div>
                 <div className="host-profile" style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
-                    <img src="./images/people.png" alt="Host picture" />
+                    <img src="../../images/people.png" alt="Host picture" />
                     <div>
                         <h2>Fernando is superhost</h2>
                         <p className="blur">Superhosts are experienced, highly rated hosts</p>

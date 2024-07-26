@@ -16,7 +16,7 @@ function BookingWidget() {
             </div>
             <button className="check-availability">Check availability</button>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src="./images/flag2.jpg" alt="" width="30" height="30" />
+                <img src="../../images/flag2.jpg" alt="" width="30" height="30" />
                 <p className="price-info" style={{ textDecoration: 'underline' }}>
                     Report this listing
                 </p>

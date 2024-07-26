@@ -203,9 +203,100 @@
 
 // // // export default App
 
+// working 
+
+// import React, { useState, useEffect } from 'react';
+// import Navbar from './Header/Navbar';
+// import Slider from './Body/Slider';
+// import SliderUpperSection from './Body/SliderUpperSection';
+// import HostInfoSection from './Body/HostInfoSection';
+// import SleepSection from './Body/SleepSection';
+// import AmenitiesSection from './Body/AmenitiesSection';
+// import DatePickerStatic from './Body/DatePickerStatic';
+// import BookingWidget from './Body/BookingWidget';
+// import ReviewSection from './Body/ReviewSection';
+// import HostSection from './Body/HostSection';
+// import ThingsToKnowSection from './Footer/ThingsToKnowSection';
+// import ExploreOptions from './Footer/ExploreOptions';
+// import ShimmerLoader from './ShimmerLoader'; // Ensure this import
+// import config from './../config.json'; // Ensure this import
+
+// function App() {
+//     const [hotel, setHotel] = useState(null);
+//     const [room, setRoom] = useState(null);
+//     const [loading, setLoading] = useState(true);
+
+//     useEffect(() => {
+//         fetch(`${config.apiBaseUrl}/hotel/hotel-sunrise`)
+//             .then(response => {
+//                 if (!response.ok) {
+//                     throw new Error('Network response was not ok');
+//                 }
+//                 return response.json();
+//             })
+//             .then(data => {
+//                 // console.log(data);
+//                 setHotel(data);
+//                 setLoading(false);
+//             })
+//             .catch(error => {
+//                 console.error('There was an error fetching the hotel!', error);
+//                 setLoading(false);
+//             });
+//     }, []);
+
+//     useEffect(() => {
+//         fetch(`${config.apiBaseUrl}/hotel/hotel-sunrise/room/deluxe-room`)
+//             .then(response => {
+//                 if (!response.ok) {
+//                     throw new Error('Network response was not ok');
+//                 }
+//                 return response.json();
+//             })
+//             .then(data => {
+//                 setRoom(data);
+//                 setLoading(false);
+//             })
+//             .catch(error => {
+//                 console.error('There was an error fetching the hotel!', error);
+//                 setLoading(false);
+//             });
+//     }, []);
+
+//     if (loading) {
+//         return <ShimmerLoader />;
+//     }
+
+//     return (
+//         <>
+//             <Navbar />
+//             <SliderUpperSection />
+//             {hotel != null ? <Slider hotel={hotel} /> :  <div><ShimmerLoader /></div>}
+//             <div style={{ display: 'flex', margin: '0 auto', padding: '20px' }}>
+//                 <div style={{ flex: '2', marginRight: '40px' }}>
+//                     <HostInfoSection />
+//                     {room ? <SleepSection room={room} /> : <ShimmerLoader />}
+//                     {hotel ? <AmenitiesSection hotel={hotel} /> : <ShimmerLoader />}
+//                     <DatePickerStatic />
+//                 </div>
+//                 <div style={{ flex: '1' }}>
+//                     <BookingWidget />
+//                 </div>
+//             </div>
+//             <ReviewSection />
+//             {hotel ? <HostSection hotel={hotel} /> : <ShimmerLoader />}
+//             <ThingsToKnowSection />
+//             <ExploreOptions />
+//         </>
+//     );
+// }
+
+// export default App;
+
 
 
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Navbar from './Header/Navbar';
 import Slider from './Body/Slider';
 import SliderUpperSection from './Body/SliderUpperSection';
@@ -218,16 +309,19 @@ import ReviewSection from './Body/ReviewSection';
 import HostSection from './Body/HostSection';
 import ThingsToKnowSection from './Footer/ThingsToKnowSection';
 import ExploreOptions from './Footer/ExploreOptions';
-import ShimmerLoader from './ShimmerLoader'; // Ensure this import
-import config from './../config.json'; // Ensure this import
+import ShimmerLoader from './ShimmerLoader';
+import config from './../config.json';
+import NotFound from './NotFound';
 
 function App() {
     const [hotel, setHotel] = useState(null);
     const [room, setRoom] = useState(null);
     const [loading, setLoading] = useState(true);
+    const { slug } = useParams();
 
     useEffect(() => {
-        fetch(`${config.apiBaseUrl}/hotel/hotel-sunrise`)
+        setLoading(true);
+        fetch(`${config.apiBaseUrl}/hotel/${slug}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -235,6 +329,7 @@ function App() {
                 return response.json();
             })
             .then(data => {
+                debugger
                 setHotel(data);
                 setLoading(false);
             })
@@ -242,10 +337,11 @@ function App() {
                 console.error('There was an error fetching the hotel!', error);
                 setLoading(false);
             });
-    }, []);
+    }, [slug]);
 
     useEffect(() => {
-        fetch(`${config.apiBaseUrl}/hotel/hotel-sunrise/room/deluxe-room`)
+        setLoading(true);
+        fetch(`${config.apiBaseUrl}/hotel/${slug}/room/deluxe-room`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -257,10 +353,10 @@ function App() {
                 setLoading(false);
             })
             .catch(error => {
-                console.error('There was an error fetching the hotel!', error);
+                console.error('There was an error fetching the room!', error);
                 setLoading(false);
             });
-    }, []);
+    }, [slug]);
 
     if (loading) {
         return <ShimmerLoader />;
@@ -268,29 +364,47 @@ function App() {
 
     return (
         <>
-            <Navbar />
-            <SliderUpperSection />
-            {hotel ? <Slider hotel={hotel} /> :  <div><ShimmerLoader /></div>}
-            <div style={{ display: 'flex', margin: '0 auto', padding: '20px' }}>
-                <div style={{ flex: '2', marginRight: '40px' }}>
-                    <HostInfoSection />
-                    {room ? <SleepSection room={room} /> : <ShimmerLoader />}
-                    {hotel ? <AmenitiesSection hotel={hotel} /> : <ShimmerLoader />}
-                    <DatePickerStatic />
-                </div>
-                <div style={{ flex: '1' }}>
-                    <BookingWidget />
-                </div>
-            </div>
-            <ReviewSection />
-            {hotel ? <HostSection hotel={hotel} /> : <ShimmerLoader />}
-            <ThingsToKnowSection />
-            <ExploreOptions />
+            {hotel ? (
+                <>
+                    <Navbar />
+                    <SliderUpperSection />
+                    <Slider hotel={hotel} />
+                    <div style={{ display: 'flex', margin: '0 auto', padding: '20px' }}>
+                        <div style={{ flex: '2', marginRight: '40px' }}>
+                            <HostInfoSection />
+                            {room ? <SleepSection room={room} /> : <ShimmerLoader></ShimmerLoader>}
+                            {hotel ? <AmenitiesSection hotel={hotel} /> : <ShimmerLoader></ShimmerLoader>}
+                            <DatePickerStatic />
+                        </div>
+                        <div style={{ flex: '1' }}>
+                            <BookingWidget />
+                        </div>
+                    </div>
+                    <ReviewSection />
+                    {hotel ? <HostSection hotel={hotel} /> : <ShimmerLoader></ShimmerLoader>}
+                    <ThingsToKnowSection />
+                    <ExploreOptions />
+                </>
+            ) : (
+                <NotFound />
+            )}
         </>
     );
+    
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
 
 // import React, { useState, useEffect } from 'react';
 // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';

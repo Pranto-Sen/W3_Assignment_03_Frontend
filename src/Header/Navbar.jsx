@@ -78,18 +78,18 @@ function Navbar() {
         <li id="anyweek" style={{ fontWeight: 'bold' }} onClick={openModal}>Any week</li>
         <li id="addguests" onClick={openModal}>Add guests</li>
         <li>
-          <img src="./images/search.png" alt="search" width="30" height="30" onClick={openModal} />
+          <img src="../../images/search.png" alt="search" width="30" height="30" onClick={openModal} />
         </li>
       </ul>
       <ul className="side-navbar" id="navbar-list">
         <li>
-          <img className="side-navbar" src="./images/language.svg" alt="language" width="30" height="30" onClick={openModal} />
+          <img className="side-navbar" src="../../images/language.svg" alt="language" width="30" height="30" onClick={openModal} />
         </li>
         <li>
-          <img className="side-navbar" src="./images/menu.svg" alt="menu" width="30" height="30" onClick={openModal} />
+          <img className="side-navbar" src="../../images/menu.svg" alt="menu" width="30" height="30" onClick={openModal} />
         </li>
         <li>
-          <img className="side-navbar" src="./images/profile.png" alt="profile" width="30" height="30" onClick={openModal} />
+          <img className="side-navbar" src="../../images/profile.png" alt="profile" width="30" height="30" onClick={openModal} />
         </li>
       </ul>
       {modalOpen && (
@@ -147,27 +147,27 @@ function Navbar() {
               <div className="section" id="searchregionInner">
                 <div className="region-grid">
                   <div className="region-item" onClick={() => handleLocationClick("I'm flexible")}>
-                    <img src="./images/small_map.jpg" alt="I'm flexible" />
+                    <img src="../../images/small_map.jpg" alt="I'm flexible" />
                     <p>I'm flexible</p>
                   </div>
                   <div className="region-item" onClick={() => handleLocationClick("Southeast Asia")}>
-                    <img src="./images/small_map.jpg" alt="Southeast Asia" />
+                    <img src="../../images/small_map.jpg" alt="Southeast Asia" />
                     <p>Southeast Asia</p>
                   </div>
                   <div className="region-item" onClick={() => handleLocationClick("Canada")}>
-                    <img src="./images/small_map.jpg" alt="Canada" />
+                    <img src="../../images/small_map.jpg" alt="Canada" />
                     <p>Canada</p>
                   </div>
                   <div className="region-item" onClick={() => handleLocationClick("Europe")}>
-                    <img src="./images/small_map.jpg" alt="Europe" />
+                    <img src="../../images/small_map.jpg" alt="Europe" />
                     <p>Europe</p>
                   </div>
                   <div className="region-item" onClick={() => handleLocationClick("Thailand")}>
-                    <img src="./images/small_map.jpg" alt="Thailand" />
+                    <img src="../../images/small_map.jpg" alt="Thailand" />
                     <p>Thailand</p>
                   </div>
                   <div className="region-item" onClick={() => handleLocationClick("Middle East")}>
-                    <img src="./images/small_map.jpg" alt="Middle East" />
+                    <img src="../../images/small_map.jpg" alt="Middle East" />
                     <p>Middle East</p>
                   </div>
                 </div>

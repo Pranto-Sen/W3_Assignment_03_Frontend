@@ -10,10 +10,10 @@ function HostSection({hotel}) {
                     <div id="host-card">
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <div>
-                                <img src="./images/profile.png" alt="Host Image" />
+                                <img src="../../images/profile.png" alt="Host Image" />
                                 {/* <h2>Fernando</h2> */}
-                                <h2>{hotel.host_information[0]}</h2>
-                                <p className="superhost">Superhost</p>
+                                <h2>{hotel.host_information[0]["name"]}</h2>
+                                <p className="superhost">{hotel.host_information[0]["title"]}</p>
                             </div>
 
                             <div>
@@ -37,8 +37,7 @@ function HostSection({hotel}) {
                         <p>Born in the 80s</p>
                         <p>My work: Hospitality</p>
                         <p>
-                            Hello world I love travelling and i also love wellcoming guests in
-                            my home country, Peru meeting new...
+                        {hotel.host_information[0]["description"]}
                         </p>
                         <p style={{ textDecoration: 'underline', fontWeight: 'bold' }}>
                             Show more {'>'}
@@ -52,9 +51,9 @@ function HostSection({hotel}) {
                         </p>
                         <h3>Co-host</h3>
                         <div className="co-hosts">
-                            <img src="./images/profile.png" alt="Co-host Percy" />
+                            <img src="../../images/profile.png" alt="Co-host Percy" />
                             <span style={{ marginRight: '20px' }}>Percy</span>
-                            <img src="./images/profile.png" alt="Co-host Raul" />
+                            <img src="../../images/profile.png" alt="Co-host Raul" />
                             <span>Raul</span>
                         </div>
                         <h3>Host Details</h3>

@@ -220,7 +220,7 @@ function SliderUpperSection() {
             <h1>Comfy New Apt. in Pueblo Libre!</h1>
             <div className="actions">
                 <button className="custom-share-button" onClick={handleShareClick}>
-                    <img src="./images/share.png" alt="Share icon" />
+                    <img src="../../images/share.png" alt="Share icon" />
                     <p>Share</p>
                 </button>
                 <button className={`love-button ${isLoved ? 'loved' : ''}`} onClick={handleLoveClick}>

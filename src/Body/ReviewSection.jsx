@@ -9,7 +9,7 @@ function ReviewSection() {
                     <div id="review-title">No reviews (yet)</div>
                     <div id="review-info">
                         <p>
-                            <img src="./images/star.jpg" alt="" width="30px" height="30px" />
+                            <img src="../../images/star.jpg" alt="" width="30px" height="30px" />
                         </p>
                         <p id="review-text">
                             This host has 310 reviews for other places to stay.
@@ -25,7 +25,7 @@ function ReviewSection() {
                 <h2>Where you'll be</h2>
                 <p>Lima, Provincia de Lima, Peru</p>
                 <div id="map">
-                    <img src="./images/map.jpg" alt="" style={{ width: '90%', height: '70%' }} />
+                    <img src="../../images/map.jpg" alt="" style={{ width: '90%', height: '70%' }} />
                 </div>
                 <p style={{ textDecoration: 'underline', fontWeight: 'bold' }}>Show more {'>'}</p>
                 <hr />
