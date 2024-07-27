@@ -70,6 +70,7 @@ main {
 
   #navbar ul {
       font-size: 4px;
+      margin-left: 20px;
   }
 
   #navbar-list li {
@@ -425,7 +426,7 @@ td:hover {
 
 /* galary *//* Basic styling for the slider */
 .gallery-modal {
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -514,7 +515,7 @@ td:hover {
   margin: 0;
 }
 .custom-share-modal {
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -1433,3 +1434,76 @@ footer {
 .not-found-link:hover {
   background-color: #0056b3;
 }
+
+
+
+/* Hello */.slider-upper-section {
+    padding: 20px;
+  }
+  
+  .actions {
+      display: flex;
+      gap: 12px;
+  }
+  
+  .custom-share-button, .love-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      color: #333;
+  }
+  
+  .love-button.loved svg {
+      fill: red;
+  }
+  
+  .custom-share-modal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+  }
+  
+  .custom-share-modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px; /* Adjust width as needed */
+      position: relative;
+      text-align: center; /* Center the content */
+  }
+  
+  .custom-share-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+  }
+  
+  .custom-share-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 12px;
+      margin-top: 20px;
+  }
+  
+  .custom-share-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      justify-content: center;
+  }
+  

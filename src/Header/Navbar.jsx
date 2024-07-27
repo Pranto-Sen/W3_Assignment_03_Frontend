@@ -1,31 +1,3 @@
-// import React from 'react';
-
-// function Navbar() {
-//   return (
-//     <nav id="navbar">
-//       <ul className="side-navbar"></ul>
-//       <ul id="navbar-list">
-//         <li id="anywhere" style={{ fontWeight: 'bold' }}>Anywhere</li>
-//         <li id="anyweek" style={{ fontWeight: 'bold' }}>Any week</li>
-//         <li id="addguests">Add guests</li>
-//         <li>
-//           <img src="./images/search.png" alt="search" width="30" height="30" />
-//         </li>
-//       </ul>
-//       <ul className="side-navbar" id="navbar-list">
-//         <li>
-//           <img className="side-navbar" src="./images/language.svg" alt="language" width="30" height="30" />
-//         </li>
-//         <li>
-//           <img className="side-navbar" src="./images/menu.svg" alt="menu" width="30" height="30" />
-//         </li>
-//         <li>
-//           <img className="side-navbar" src="./images/profile.png" alt="profile" width="30" height="30" />
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// }
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';

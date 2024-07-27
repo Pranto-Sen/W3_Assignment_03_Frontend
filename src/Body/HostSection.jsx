@@ -11,7 +11,6 @@ function HostSection({hotel}) {
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                             <div>
                                 <img src="../../images/profile.png" alt="Host Image" />
-                                {/* <h2>Fernando</h2> */}
                                 <h2>{hotel.host_information[0]["name"]}</h2>
                                 <p className="superhost">{hotel.host_information[0]["title"]}</p>
                             </div>

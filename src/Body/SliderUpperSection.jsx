@@ -193,6 +193,7 @@ function SliderUpperSection() {
     const [isLoved, setIsLoved] = useState(localStorage.getItem('isLoved') === 'true');
 
     const handleShareClick = () => {
+        debugger
         setIsModalOpen(true);
     };
 
