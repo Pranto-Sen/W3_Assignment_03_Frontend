@@ -78,7 +78,9 @@ main {
       white-space: nowrap;
   } 
 }
-/* sheemer loader */
+
+
+/* shimmer loader */
 
 .shimmer-wrapper {
   width: 100%;
@@ -107,14 +109,13 @@ main {
 }
 
 
-/*  */
+/* Modal open When Click Anywhere, Anyweek, Add guests */
 
 header {
   padding: 1rem;
 }
 
 .modal {
-  /* display: none; */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -141,6 +142,13 @@ header {
   right: 10px;
   font-size: 24px;
   color: #333;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-header {
@@ -250,49 +258,8 @@ input[type="text"]:focus {
   }
 }
 
-
-
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* flatpicker calender */
-.calendar{
-  border-radius: 6px;
-  padding: 20px;
-}
-.calendar-header{
-  margin-right: 5rem;
-}
-
-
-@media (max-width: 768px) {
-  .calendar{
-    /* max-width: 400px; */
-   /* background-color: #f2f2f2; */
-   /* border-radius: 6px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   padding: 20px; */
- }
-}
-
-
-
 /* static calender */
 .calendar-static {
-  /* max-width: 400px;
-  background-color: #f2f2f2; */
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -423,10 +390,8 @@ td:hover {
   cursor: pointer;
 }
 
-
-/* galary *//* Basic styling for the slider */
+/* show all photo for the slider */
 .gallery-modal {
-  /* display: none; */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -459,8 +424,6 @@ td:hover {
 }
 
 .gallery-image {
-  /* max-width: 100%;
-  max-height: 100%; */
   width: 700px;
   object-fit: contain;
 }
@@ -489,14 +452,12 @@ td:hover {
   color: white;
 }
 
-
 /* share button */
 
 .custom-share-modal-content {
   background: white;
 
 } 
-
 .custom-share-button {
   display: flex;
   align-items: center;
@@ -515,7 +476,6 @@ td:hover {
   margin: 0;
 }
 .custom-share-modal {
-  /* display: none; */
   position: fixed;
   z-index: 1;
   left: 0;
@@ -563,6 +523,20 @@ td:hover {
   cursor: pointer;
 }
 
+.custom-share-option:hover {
+  background-color: #e0e0e0;
+}
+
+.custom-share-option svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.custom-share-option svg path {
+  fill: #333;
+}
+
 /* save button */
 .love-button {
   display: flex;
@@ -595,52 +569,7 @@ td:hover {
   color: red;
 }
 
-/* share  */
-.custom-share-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.custom-share-option {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.custom-share-option:hover {
-  background-color: #e0e0e0;
-}
-
-.custom-share-option svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-.custom-share-option svg path {
-  fill: #333;
-}
-/* Listing Header */
-
-.listing-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .listing-header {
-    display: none;
-  }
-}
-
-/* upper slider */
-/* SliderUpperSection.module.css */
+/* SliderUpperSection */
 .slider-upper-section {
   display: flex;
   align-items: center;
@@ -674,7 +603,6 @@ td:hover {
 .slider-upper-section button p {
   font-size: 14px;
 }
-/* SliderUpperSectionResponsive.module.css */
 @media (max-width: 768px) {
   .slider-upper-section h1 {
       font-size: 14px;
@@ -693,7 +621,6 @@ td:hover {
       font-size: 12px;
   }
 }
-
 
 /* Slider section */
 .slider {
@@ -784,7 +711,7 @@ td:hover {
   }
 }
 
-/* add geust */
+/* add geust modal */
 .container {
   background: white;
   padding: 20px;
@@ -817,7 +744,6 @@ label span {
 }
 
 .counter button {
-  /* background-color: #e0e0e0; */
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -933,8 +859,6 @@ hr {
     display: none;
   }
 }
-
-
 
 /* review section */
 
@@ -1153,7 +1077,7 @@ input[type="date"] {
   background-color: #444;
 }
 
-/*  */
+/* Footer section */
 #things-to-know-body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -1183,7 +1107,6 @@ input[type="date"] {
   margin-bottom: 8px;
 }
 
-/*  */
 #options-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1264,122 +1187,7 @@ footer {
   }
 }
 
-
-/*  */
-/* SliderUpperSection.module.css */
-
-/* Share Button */
-.customShareButton {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 16px;
-}
-.customShareButton img {
-  width: 18px;
-  height: 18px;
-}
-.customShareButton p {
-  text-decoration: underline;
-  margin: 0;
-}
-
-/* Modal Styles */
-.customShareModal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.customModalContent {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 300px;
-  border-radius: 8px;
-}
-.customModalClose {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.customModalClose:hover,
-.customModalClose:focus {
-  color: black;
-  text-decoration: none;
-}
-
-/* Share Options */
-.customShareOptions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.customShareOption {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.customShareOption:hover {
-  background-color: #e0e0e0;
-}
-.customShareOption svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-.customShareOption svg path {
-  fill: #333;
-}
-
-/* Save Button */
-.loveButton {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  font-family: Arial, sans-serif;
-}
-.loveButton svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  transition: fill 0.3s, color 0.3s;
-}
-.loveButton p {
-  text-decoration: underline;
-  margin: 0;
-  transition: color 0.3s;
-}
-.loveButton.loved svg {
-  fill: red;
-  stroke: red;
-}
-.loveButton.loved p {
-  color: red;
-}
-
-
-/* not found  */
+/* not found 404 page */
 
 .not-found {
   display: flex;
@@ -1435,9 +1243,8 @@ footer {
   background-color: #0056b3;
 }
 
-
-
-/* Hello */.slider-upper-section {
+/* slider-upper-section */
+.slider-upper-section {
     padding: 20px;
   }
   
@@ -1478,9 +1285,9 @@ footer {
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
-      width: 300px; /* Adjust width as needed */
+      width: 300px; 
       position: relative;
-      text-align: center; /* Center the content */
+      text-align: center; 
   }
   
   .custom-share-modal-close {
