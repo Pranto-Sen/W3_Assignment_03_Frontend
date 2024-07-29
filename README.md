@@ -32,4 +32,44 @@ To get started with this project, follow the steps below:
      npm run dev
     ```
 
-    The application will run at `http://localhost:5173/hotel/:slug`.
+    The application will run at `http://localhost:5173/hotel/:slug`
+   
+## Project structure
+```
+W3_Assignment_03_Frontend
+├── images
+├── node_modules
+├── public
+└── src
+    ├── assets
+    ├── Body
+    │   ├── AmenitiesSection.jsx
+    │   ├── BookingWidget.jsx
+    │   ├── DatePickerStatic.jsx
+    │   ├── HostInfoSection.jsx
+    │   ├── HostSection.jsx
+    │   ├── ReviewSection.jsx
+    │   ├── SleepSection.jsx
+    │   ├── Slider.jsx
+    │   └── SliderUpperSection.jsx
+    ├── Footer
+    │   ├── ExploreOptions.jsx
+    │   └── ThingsToKnowSection.jsx
+    ├── Header
+    │   └── Navbar.jsx
+    ├── App.jsx
+    ├── main.jsx
+    ├── NotFound.jsx
+    ├── ShimmerLoader.jsx
+    ├── style.css
+    └── useHotelData.jsx
+├── .eslintrc.cjs
+├── .gitignore
+├── config.json
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
+
+```
